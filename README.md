@@ -1,6 +1,6 @@
 # MultiQC: Summary Analysis Reports
 
-Philip Ewels, Måns Magnusson, Max Käller.
+### Philip Ewels, Måns Magnusson, Max Käller.
 
 ## Abstract
 As large scale genomics studies become more common, fast and accurate quality control is increasingly important. Here, we describe MultiQC: a tool to summarize key metrics across all samples in a project into a single report. A modular design allows MultiQC to work with multiple analysis types. Templating and process triggers provide a framework for simple extension and customization. Reports enable a fast overview of the entire analysis and highlight anomalous samples and problematic steps.
@@ -33,17 +33,15 @@ _Fig 1. Typical output from MultiQC_
 ## Report Tools
 Within the MultiQC report there are a number of features to aid interpretation and usage. Modules add columns to a shared 'General Statistics' table at the top of the report, allowing the analysis progression to be easily quantified (Fig 2). Automated visualisation of these numbers and tools for sorting and sample ordering allows fast identification of patterns and sample groupings.
 
-![Figure 2 - General Statistics Table](assets/general_stats.png)
-_Fig 2. General Statistics table, showing progression of samples through analysis pipeline._
+![General Statistics table, showing progression of samples through analysis pipeline.](assets/general_stats.png)
 
-Plots showing data from each module are generated using the HighCharts JavaScript library [1]. They are resizable and interactive, some with click and drag zooming. Plots can be exported in a range of formats, including png, svg and pdf.
+Plots showing data from each module are generated using the HighCharts JavaScript library [@Highsoft2015a]. They are resizable and interactive, some with click and drag zooming. Plots can be exported in a range of formats, including png, svg and pdf.
 
 MultiQC reports also have a 'Toolbox'. Samples can be highlighted using search strings, optionally using regular expressions, to easily visualize groups within plots. A similar interface allows sample renaming, with a bulk option so that sample names can be pasted from a spreadsheet. Samples can also be temporarily hidden from the report. Changes can be saved for the report or set as defaults for all reports. Settings can also be saved as a file so that they can be shared with others.
 
 A step by step tour is available in all reports to familiarize new users with the available features.
 
-![Figure 3 - Sample grouping and highlighting](assets/fastqc_highlighted.png)
-_Fig 3. Mean sequence quality across reads, from FastQC. Samples coloured by highlighting tool._
+![Mean sequence quality across reads, from FastQC. Samples coloured by highlighting tool.](assets/fastqc_highlighted.png)
 
 
 
@@ -59,11 +57,10 @@ You can find report examples, usage tutorials and documentation at http://multiq
 
 MultiQC comes with a MIT license, allowing virtually any downstream customization with attribution. It is available on GitHub at https://github.com/ewels/MultiQC and in the Python Package Index at https://pypi.python.org/pypi/multiqc
 
-### Author Contributions
+## Author Contributions
 PE wrote the pacakge and the manuscript. MM helped with reorganising code within the package to make it clearer. MK directed the research group.
 
-### Acknowledgements
+## Acknowledgements
 The authors would like to thank Guillermo Carrasco, Robin Andeer, Johannes Alneberg and Remi Ohlsson for useful discussion. Guillermo Carrasco was responsible for the first version of the Qualimap module.
 
-### References
-[1] http://www.highcharts.com/
+## References
