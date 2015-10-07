@@ -1,4 +1,4 @@
-# MultiQC: Summarise analysis results in a single report
+# MultiQC: Summarize analysis results in a single report
 
 ### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Max Käller<sup>2</sup>.
 
@@ -47,7 +47,7 @@ It is hoped that users will contribute new modules back to the core distribution
 ## Help and Availability
 You can find report examples, usage tutorials and documentation at http://multiqc.info. Feature requests and bug reports should be submitted to https://github.com/ewels/MultiQC/issues
 
-MultiQC comes with a MIT license, allowing virtually any downstream customization with attribution. It is available on GitHub at https://github.com/ewels/MultiQC and in the Python Package Index at https://pypi.python.org/pypi/multiqc
+MultiQC is open source software and comes with a MIT license, allowing virtually any downstream customization with attribution. It is available on GitHub at https://github.com/ewels/MultiQC and in the Python Package Index at https://pypi.python.org/pypi/multiqc
 
 ## Author Contributions
 PE wrote the pacakge and the manuscript. MM helped with reorganising code within the package to make it clearer. MK directed the research group.
