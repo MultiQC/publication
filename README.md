@@ -1,8 +1,9 @@
 # MultiQC: Summarise analysis results in a single report
 
-### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Max Käller<sup>1</sup>.
+### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Max Käller<sup>2</sup>.
 
 _<sup>1</sup> Department of Biochemistry and Biophysics, Science for Life Laboratory, Stockholm University, Stockholm 106 91, Sweden_
+_<sup>2</sup> Science for Life Laboratory, School of Biotechnology, Division of Gene Technology, Royal Institute of Technology, Stockholm, Sweden_
 
 _<sup>*</sup> To whom correspondence should be addressed._
 
