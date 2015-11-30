@@ -76,11 +76,16 @@ Preseq, Subread featureCounts and Qualimap.
 * QC of samples (FastQ Screen / FastQC)
 * Spotting failed samples
 
-## Author Contributions
+## Funding
+This work was funded by
+
+## Footnotes
+
+#### Author Contributions
 PE responsible for the idea, the package and the manuscript.
 MM helped with some code reorganization. MK directed the research group.
 
-## Acknowledgements
+#### Acknowledgements
 The authors would like to thank Guillermo Carrasco, Robin Andeer, Johannes Alneberg and Remi Ohlsson for useful discussion. Guillermo Carrasco was responsible for the first version of the Qualimap module.
 
 ## References
