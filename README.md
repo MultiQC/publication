@@ -28,7 +28,7 @@ It requires little or no configuration, is run on the command line and generates
 a single stand-alone HTML report.
 
 #### Availability and implementation
-The package is available with an MIT licence through GitHub and the Python Package Index.
+The package is available with an MIT license through GitHub and the Python Package Index.
 Example reports, documentation and downloads are available at: http://multiqc.info
 
 
