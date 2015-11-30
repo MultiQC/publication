@@ -1,14 +1,35 @@
-# MultiQC: Summarize analysis results in a single report
+# MultiQC: Summarize analysis results for multiple samples in a single report
 
 ### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Max Käller<sup>2</sup>.
 
-_<sup>1</sup> Department of Biochemistry and Biophysics, Science for Life Laboratory, Stockholm University, Stockholm 106 91, Sweden_
-_<sup>2</sup> Science for Life Laboratory, School of Biotechnology, Division of Gene Technology, Royal Institute of Technology, Stockholm, Sweden_
+_<sup>1</sup> Department of Biochemistry and Biophysics, Science for Life Laboratory,
+Stockholm University, Stockholm 106 91, Sweden_
+
+_<sup>2</sup> Science for Life Laboratory, School of Biotechnology,
+Division of Gene Technology, Royal Institute of Technology, Stockholm, Sweden_
 
 _<sup>*</sup> To whom correspondence should be addressed._
 
 ## Abstract
-As large scale genomics studies become more common, fast and accurate quality control is increasingly important. Here, we describe MultiQC: a tool to summarize key metrics across all samples in a project into a single report. A modular design allows MultiQC to work with multiple analysis types. Templating and process triggers provide a framework for simple extension and customization. Reports enable a fast overview of the entire analysis and highlight anomalous samples and problematic steps.
+
+#### Summary
+Fast and accurate quality control is essential for studies involving next-generation
+sequencing data. Numerous tools exist to quantify QC metrics, but assessing analysis
+results across an entire project can be time consuming and error prone. For example,
+it is not possible to interpret hundreds of FastQC reports; simply picking a handful
+may miss group patterns or outlier samples.
+
+#### Results
+We present MultiQC, a tool to create a single report with interactive plots generated
+for multiple analyses across many samples. Reports enable global trends to be quickly
+visualized and outlier samples identified. MultiQC can plot data from many common
+bioinformatics tools and is built to allow easy extension and customization.
+It requires little or no configuration, is run on the command line and generates
+a single stand-alone HTML report.
+
+#### Availability and implementation
+The package is available through GitHub and the Python Package Index. Example reports,
+documentation and downloads are available at: http://multiqc.info
 
 ## Introduction
 Advances in next-generation sequencing are leading to an avalanche of data. Whilst opening doors to new analysis types and experimental designs, this provides a challenge for bioinformaticians. The sheer volume of data associated with a typical project requires high throughput processing and analysis, often yielding vast numbers of log files and quality metrics. Additionally, large numbers of samples increase the chance of errors and sample swaps - the earlier such mistakes can be detected the better. This leads to the complex and time consuming task of checking multiple statistics through numerous reports and log files for every sample.
@@ -16,7 +37,7 @@ Advances in next-generation sequencing are leading to an avalanche of data. Whil
 MultiQC addresses this problem by searching an analysis directory for any recognized content and creating a single summary report. It is a general use tool, designed to parse log files and create plots with overlaid data. This provides the researcher with a fast method to scan all key statistics for a project quickly and easily. Additionally, shared plots allow accurate comparison between samples which is not possible when switching between different reports. It is suitable for integration with existing workflows with little to no configuration and its routine use can save a great deal of analysis time.
 
 ## Installation and Usage
-MultiQC is a Python package available on the Python Package Index (PyPI) and GitHub. It can be installed on the command line using the common pip package, with the command `pip install multiqc`. MultiQC is compatible with any system running Python 2.7+ or Python 3.2+, including all Linux distrubtions, Mac OS X and Windows users who have installed Python. It has a small number of Python package dependencies, automatically installed by pip. A graphical interface is available for Mac OS X users, which can be downloaded from GitHub. Users of Galaxy and BaseSpace can find MultiQC available as an app.
+MultiQC is a Python package available on the Python Package Index (PyPI) and GitHub. It can be installed on the command line using the common pip package, with the command `pip install multiqc`. MultiQC is compatible with any system running Python 2.7+ or Python 3.2+, including all Linux distribtions, Mac OS X and Windows users who have installed Python. It has a small number of Python package dependencies, automatically installed by pip. A graphical interface is available for Mac OS X users, which can be downloaded from GitHub. Users of Galaxy and BaseSpace can find MultiQC available as an app.
 
 Once installed, MultiQC can be run on the command line with the command `multiqc <analysis directory>`. This searches the specified path recursively for any recognized log files, and compiles a report. Reports are interactive web pages, viewable with any modern web browser. They are also saved as zip files for easy sharing. Parsed data is saved as tab delimited text files within the report directory for downstream use.
 
