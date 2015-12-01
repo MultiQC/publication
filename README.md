@@ -10,6 +10,18 @@ Division of Gene Technology, Royal Institute of Technology, Stockholm, Sweden_
 
 _<sup>*</sup> To whom correspondence should be addressed._
 
+
+## Work to do
+* Extend `MultiQC_NGI` to fetch sample name info and store rRNA / insert size info.
+* Look into Sierra / bcbio integration
+* Bioanalyzer module
+* RSeQC and more Picard modules
+* Figures
+	* FastQC GC plot
+	* Highlighting samples
+	* General stats?
+* Supplementaries
+
 ## Abstract
 
 #### Summary
@@ -68,13 +80,15 @@ including FastQC, FastQ Screen, Cutadapt, Bowtie 1/2, STAR, Tophat, Bismark, Pic
 Preseq, Subread featureCounts and Qualimap.
 
 ### Example use: Development project
-* Comparing insert sizes
-* Needs bioanalyzer module
-* Duplicates / reads aligned
+We have used MultiQC extensively during technique development projects. Groups of samples processed using different methods can be highlighted with colours in the report. These highlights are shared across all plots, allowing patterns to be quickly identified across metrics. For example, we have plotted insert sizes measured on the bioanalyzer prior to sequencing and compared these calculated by Picard after alignment to test sequencing length bias. Sample highlighting allows quick correlation with alignment and duplication scores as calculated by alignment tools. Collecting such metrics in a single report allows fast and intuitive interpretation of analysis results. MultiQC reports are stand-alone and can be opened in any web browser, making them very easy to share between collaborators.
 
 ### Example use: Sequencing facility
-* QC of samples (FastQ Screen / FastQC)
-* Spotting failed samples
+MultiQC is ideal for use in a high throughput sequencing facility due to its flexibility and ease of use. It is very easy to implement at the end of any analysis pipeline and reports give the overview required to spot failing samples. Modules written for FastQC and FastQ Screen make failing samples stand out, reducing time spent on QC and the chance of manual error.
+Templates allow specific branding and custom messages to be added to reports, making MultiQC an ideal base for automated delivery reports. Plugins can facilitate additional functionality - we have written the `MultiQC_NGI` plugin which fetches metadata from our LIMS and stores summary data. This allows tight integration with our process flow and a simple way to aggreate bulk analytics data with which we can monitor the performance of our sequencing pipelines (ribosomal RNA depletion effeciences, WG sequencing insert sizes and so on). MultiQC can print output to a standard out stream, allowing it to be integrated into LIMS systems for real time report generation. This has been recently implemented in Sierra.
+
+### Example use: Single cell data
+MultiQC is able to parse data for a large projects in a single run. Whilst report plots can become impractical, log files for many thousands of samples can be parsed in minutes. MultiQC stores this data in tab-delimited files which can be used in downstream analysis. This is useful when processing single cell data - quality control metrics can be loaded into analysis scripts and data sets not meeting required criteria can be programmatically removed.
+
 
 ## Funding
 This work was funded by
