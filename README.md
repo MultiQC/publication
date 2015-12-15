@@ -1,6 +1,6 @@
 # MultiQC: Summarize analysis results for multiple samples in a single report
 
-### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Max Käller<sup>2</sup>.
+### Philip Ewels<sup>1,*</sup>, Måns Magnusson<sup>1</sup>, Sverker Lundin<sup>1</sup>, Max Käller<sup>2</sup>.
 
 _<sup>1</sup> Department of Biochemistry and Biophysics, Science for Life Laboratory,
 Stockholm University, Stockholm 106 91, Sweden_
@@ -89,15 +89,18 @@ Templates allow specific branding and custom messages to be added to reports, ma
 ### Example use: Single cell data
 MultiQC is able to parse data for a large projects in a single run. Whilst report plots can become impractical, log files for many thousands of samples can be parsed in minutes. MultiQC stores this data in tab-delimited files which can be used in downstream analysis. This is useful when processing single cell data - quality control metrics can be loaded into analysis scripts and data sets not meeting required criteria can be programmatically removed.
 
+<img src="figures/MultiQC_figures_Combined.png" style="width:100%;">
+> **Figure 1.** **A:** Top of a typical MultiQC report. The general statistics table can be seen with metrics gathered across multiple analysis outputs for each sample. **B:** Example of an overlay plot. GC content data from FastQC is overlayed, with datasets coloured by FastQC status. **C:** Sample highlighting shown with coverage decay plots from Qualimap. The MultiQC toolbox can be seen on the right with regular expression pattern matching for sample names.
+
 
 ## Funding
-This work was funded by
+This work was funded by...
 
 ## Footnotes
 
 #### Author Contributions
 PE responsible for the idea, the package and the manuscript.
-MM helped with some code reorganization. MK directed the research group.
+MM helped with some code reorganization. SL and MK directed the research group.
 
 #### Acknowledgements
 The authors would like to thank Guillermo Carrasco, Robin Andeer, Johannes Alneberg and Remi Ohlsson for useful discussion. Guillermo Carrasco was responsible for the first version of the Qualimap module.
